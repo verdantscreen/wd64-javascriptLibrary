@@ -52,10 +52,52 @@ first();
 // console.log(first);
 
 //? Anonymous Function
-// Anonymous Functions are stored in memory but the runtime doesn't automatically create a reference to it
+// Anonymous Functions are stored in memory but the runtime doesn't automatically create a reference to it. No name.
 
 let anon = function () {
   console.log("anon function");
 };
 
 anon();
+
+//? Parameters
+// Allows us to accept info already declared.
+
+function parameterFunc(num) {
+  console.log(num);
+}
+
+parameterFunc(2);
+parameterFunc(9);
+
+let returnedVal = 5;
+parameterFunc(returnedVal);
+
+let firstName = "Jane";
+let lastName = "Doe";
+
+function greeting(first, last) {
+  console.log(`Hi ${first}! Welcome back.`);
+  console.log(`This is the first parameter: ${first}`);
+  console.log(`This is the second parameter: ${last}`);
+}
+
+greeting(firstName);
+greeting(lastName);
+greeting(firstName, lastName);
+greeting(firstName, null);
+greeting("", lastName);
+
+let x = 1;
+let y = 2;
+
+function show(position1, position2) {
+  console.log(`This is the first parameter: ${position1}`);
+  console.log(`This is the second parameter: ${position2}`);
+}
+
+show(x);
+show(y);
+show(x, "");
+show("", y);
+show(x, y);

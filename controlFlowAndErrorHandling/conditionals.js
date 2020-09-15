@@ -229,3 +229,52 @@ switch (instructor) {
   default:
     console.log(`Sorry, I can't find what ${instructor} teaches.`);
 }
+
+//! Challenge 2: Take Home Challenge
+/*  
+Create a switch statement that takes in a value (number) that represents a grade.  If it is True, console log that they are passing with the correct letter grade.
+*   A: 89-100
+*   B: 79-88
+*   C: 66-78
+*   D: 59-65
+*   F: 0-59
+*/
+
+/* let grade = 88;
+
+switch (grade) {
+  case "A":
+    console.log(`${grade} is a part of the Web Dev Team.`);
+    break;
+  //Once each case has been evaluated and we return a result, we need to note to "break" out from our switch statement.
+  case "B":
+    console.log(`${instructor} is a part of the Web Dev Team.`);
+    break;
+  case "C":
+    console.log(`${instructor} is a part of the Software Dev Team.`);
+    break;
+  default:
+    console.log(`Sorry, I can't find what ${instructor} teaches at this time.`);
+  //Need to use a default to help us catch those cases when none are true.
+} */
+
+let grade = 85;
+if (grade >= 89) {
+  console.log(`Congrats! you earned a letter grade A with ${grade} percent.`);
+} else if (grade >= 79) {
+  console.log(
+    `Good work, you earned a letter grade of B with ${grade} percent. Identify your weak points to improve.`
+  );
+} else if (grade >= 66) {
+  console.log(
+    `You earned a letter grade of C with ${grade} percent. Reach out for help with questions.`
+  );
+} else if (grade >= 59) {
+  console.log(
+    `You earned a letter grade of D with ${grade} percent. Reach out for help with questions.`
+  );
+} else {
+  console.log(
+    `You earned a letter grade of F with ${grade} percent. Reach out for help with questions and to schedule tutoring.`
+  );
+}
