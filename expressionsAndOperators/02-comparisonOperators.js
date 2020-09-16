@@ -1,4 +1,4 @@
-//? Equal
+/* //? Equal
 "3" == 3;
 console.log("3" == 3);
 // == is equal
@@ -7,7 +7,7 @@ console.log("3" == 3);
         - coercion is the prcoess of converting a value from one type to another
     */
 
-//? Strict Equal
+/* //? Strict Equal
 console.log("3" === 3);
 console.log(3 === 3);
 // === is strictly equal
@@ -21,6 +21,7 @@ console.log("3" != 3);
 
 //? Strict Not Equal
 console.log("3" !== 3);
+*/
 
 //? Greater Than
 3 > 2;

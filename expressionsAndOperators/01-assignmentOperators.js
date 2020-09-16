@@ -1,5 +1,5 @@
 let x = "hum";
-x += 1;
+x += "drum";
 console.log(x); //string example
 
 // ASSIGNMENT OPERATOR:

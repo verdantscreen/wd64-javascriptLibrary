@@ -123,7 +123,7 @@ let obj = {
 console.log(obj);
 
 //? ARRAYS
-/*
+/* special type of object
 
     - Containers that hold a list of items.
     - denoted by []
