@@ -101,3 +101,24 @@ show(y);
 show(x, "");
 show("", y);
 show(x, y);
+
+//for loop invoking a function that includes a ternary
+/*for(let i=0; i<=10; i++) {
+  evensOdds(i);
+}
+
+function evensOdds(i){
+  console.log(i);
+  i%2 === 0 ? console.log('The number is even.') : console.log('The number is odd.')
+}*/
+
+for (let i = 0; i <= 10; i++) {
+  evensOdds(i);
+}
+
+function evensOdds(i) {
+  console.log(i);
+  i % 2 === 0
+    ? console.log("The number is even.")
+    : console.log("The number is odd.");
+}

@@ -50,7 +50,8 @@
 * **********
 ! FORIN LOOP
 * **********
-    
+    don't require index number
+    'info' is a placeholder for whatever information we want to pull from an object (keys)
 */
 
 let city = {
@@ -60,7 +61,7 @@ let city = {
 };
 
 for (info in city) {
-  console.log(info);
+  // console.log(info);} //calling keys of objects
   console.log(city[info]);
 }
 
@@ -70,28 +71,28 @@ for (info in city) {
     }
 */
 
-let list = ["milk", "eggs", "beans", "bread", "banana"];
+let list = ["milk", "eggs", "beans", "bread", "banana"]; //arrays don't have keys per say, they have indexes or positions instead
 
 for (item in list) {
-  //console.log(item);
-  console.log(list[item]);
+  //console.log(item); // calling on indexes
+  console.log(list[item]); // calling on values within indexes of array
 }
 
-/*//! CHALLENGE
+//! CHALLENGE
 //* What if a user input their name in an odd way and we want to display it correctly.
 //let name = "piCard";
 //* Write a for-in loop that pulls in the name, changes each letter to the proper case and then console.log the results.
 
-let fullName = "piCard";
+//for in, if else
+let name = "piCard";
 
-for(letter in fullName) {
-  console.log(letter);
-  console.log(fullName[letter]);
-
-letter == 0 ? fullName = name[n].toUpperCase() : fullName += name[n].toLowerCase();
+for (letter in name) {
+  letter == 0
+    ? (fullName = name[letter].toUpperCase())
+    : (fullName += name[letter].toLowerCase());
 }
 
-console.log(fullName);*/
+console.log(fullName);
 
 /*
     1) we are taking the value of the "n" index and declaring the position of 0
