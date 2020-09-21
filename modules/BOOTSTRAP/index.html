@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">EFA Bootstrap Module</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <!--<li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Disabled</a
+            >
+          </li>-->
+        </ul>
+      </div>
+    </nav>
+
+    <!-- JUMBROTRON -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">
+          Bootstrap Module Walkthrough (Fluid jumbotron)
+        </h1>
+        <p class="lead">
+          Quick guide to how to use bootstrap with projects. (This is a modified
+          jumbotron that occupies the entire horizontal space of its parent.)
+        </p>
+        <form
+          id="fs-frm"
+          name="simple-contact-form"
+          accept-charset="utf-8"
+          action="https://formspree.io/verdantscreen@gmail.com"
+          method="post"
+        >
+          <fieldset id="fs-frm-inputs">
+            <label for="full-name">Full Name</label>
+            <input
+              type="text"
+              name="name"
+              id="full-name"
+              placeholder="First and Last"
+              required=""
+            />
+            <label for="email-address">Email Address</label>
+            <input
+              type="email"
+              name="_replyto"
+              id="email-address"
+              placeholder="email@domain.tld"
+              required=""
+            />
+            <label for="message">Message</label>
+            <textarea
+              rows="5"
+              name="message"
+              id="message"
+              placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus."
+              required=""
+            ></textarea>
+            <input
+              type="hidden"
+              name="_subject"
+              id="email-subject"
+              value="Contact Form Submission"
+            />
+          </fieldset>
+          <input type="submit" value="Submit" />
+        </form>
+        <style>
+          /* reset */
+          #fs-frm input,
+          #fs-frm select,
+          #fs-frm textarea,
+          #fs-frm fieldset,
+          #fs-frm optgroup,
+          #fs-frm label,
+          #fs-frm #card-element:disabled {
+            font-family: inherit;
+            font-size: 100%;
+            color: inherit;
+            border: none;
+            border-radius: 0;
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+          }
+          #fs-frm label,
+          #fs-frm legend,
+          #fs-frm ::placeholder {
+            font-size: 0.825rem;
+            margin-bottom: 0.5rem;
+            padding-top: 0.2rem;
+            display: flex;
+            align-items: baseline;
+          }
+
+          /* border, padding, margin, width */
+          #fs-frm input,
+          #fs-frm select,
+          #fs-frm textarea,
+          #fs-frm #card-element {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 0.75em 1rem;
+            margin-bottom: 1.5rem;
+          }
+          #fs-frm input:focus,
+          #fs-frm select:focus,
+          #fs-frm textarea:focus {
+            background-color: white;
+            outline-style: solid;
+            outline-width: thin;
+            outline-color: gray;
+            outline-offset: -1px;
+          }
+          #fs-frm [type="text"],
+          #fs-frm [type="email"] {
+            width: 100%;
+          }
+          #fs-frm [type="button"],
+          #fs-frm [type="submit"],
+          #fs-frm [type="reset"] {
+            width: auto;
+            cursor: pointer;
+            -webkit-appearance: button;
+            -moz-appearance: button;
+            appearance: button;
+          }
+          #fs-frm [type="button"]:focus,
+          #fs-frm [type="submit"]:focus,
+          #fs-frm [type="reset"]:focus {
+            outline: none;
+          }
+          #fs-frm [type="submit"],
+          #fs-frm [type="reset"] {
+            margin-bottom: 0;
+          }
+          #fs-frm select {
+            text-transform: none;
+          }
+
+          #fs-frm [type="checkbox"] {
+            -webkit-appearance: checkbox;
+            -moz-appearance: checkbox;
+            appearance: checkbox;
+            display: inline-block;
+            width: auto;
+            margin: 0 0.5em 0 0 !important;
+          }
+
+          #fs-frm [type="radio"] {
+            -webkit-appearance: radio;
+            -moz-appearance: radio;
+            appearance: radio;
+          }
+
+          /* address, locale */
+          #fs-frm fieldset.locale input[name="city"],
+          #fs-frm fieldset.locale select[name="state"],
+          #fs-frm fieldset.locale input[name="postal-code"] {
+            display: inline;
+          }
+          #fs-frm fieldset.locale input[name="city"] {
+            width: 52%;
+          }
+          #fs-frm fieldset.locale select[name="state"],
+          #fs-frm fieldset.locale input[name="postal-code"] {
+            width: 20%;
+          }
+          #fs-frm fieldset.locale input[name="city"],
+          #fs-frm fieldset.locale select[name="state"] {
+            margin-right: 3%;
+          }
+        </style>
+      </div>
+    </div>
+
+    <!-- TABLES -->
+    <table class="table table-hover table-dark table-sm">
+      <thead class="bg-warning">
+        <!-- left off here saturday night-->
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col">Title</th>
+          <th scope="col">Genre</th>
+          <th scope="col">Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Beetlejuice</td>
+          <td>Comedy</td>
+          <td>PG-13</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Young Frankenstein</td>
+          <td>Comedy</td>
+          <td>PG</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Rosemary's Baby</td>
+          <td>Horror</td>
+          <td>R</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>Rocky Horror Picture Show</td>
+          <td>Musical</td>
+          <td>PG-13</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td>Hocus Pocus</td>
+          <td>Children's Comedy</td>
+          <td>PG</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- FOOTER/LIST -->
+    <footer>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item list-group-item-dark">Cras justo odio</li>
+        <li class="list-group-item list-group-item-dark">
+          Dapibus ac facilisis in
+        </li>
+        <li class="list-group-item list-group-item-dark">Morbi leo risus</li>
+      </ul>
+    </footer>
+    <!-- BOOTSTRAP -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <!-- MY SCRIPTS -->
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

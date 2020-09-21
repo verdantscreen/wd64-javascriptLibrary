@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation HTML</title>
+  </head>
+  <body>
+    <!-- All of our HTML code will go here -->
+    <!-- <h1>Hello World</h1>
+    <p id="testParagraph">sample text</p>
+    <p class="sampleClass">This paragraph has a class of 'sampleClass'</p>
+    <button id="clickThisButton">I want to be clicked</button>
+    <br />
+    <hr color="aqua" /> -->
+    <label for="nameInput">Enter Your Name:</label>
+    <input type="text" id="nameInput" placeholder="begin typing..." />
+
+    <p>Welcome!</p>
+    <p>No name has been entered</p>
+
+    <script type="text/javascript">
+      /* All of our javascript code will go here */
+      //  var x = 10;
+      //  console.log(x);
+      //  /* DOM       method          element ID */
+      // document.getElementById("testParagraph").style.color = "blue";
+      //  console.log(document.getElementById("testParagraph").style.color);
+      /* JS methods to select elements
+      document.getElementByTagName("p");
+      document.getElementByClassName("className");
+
+      <above two methods return an HTMLCollection - similar to an array (but rarely used)>
+
+      document.getElementById("idName");
+      document.querySelectorAll("p.classNameHere"); // uses CSS-style selectors; returns a pseudo-array-like list of matching elements called a Node List; since querySelectorAll returns an array-like NodeList, we need to use array-notation when selecting an element from it, even if there is only one element.*/
+
+      /*console.log(document.querySelectorAll("p.sampleClass"));
+
+      document.querySelectorAll("p.sampleClass")[0].innerText =
+        "My text has changed!";*/
+      /* innerText vs innerHTML:
+        innerText references only text displayed in browser
+        innerHTML references all HTML elements inside tag*/
+      /* document.querySelectorAll("p.sampleClass")[0].innerHTML =
+        "<span> I am a whole new element!</span>"; /* we can also set the .innerHTML = " " to erase the contents*/
+      /* eventListeners "listen" or wait for a specified event to happen and then run a function upon its occurence
+        common events we listen for:
+        - clicks mouse
+        - presses key
+        - resizes window
+        - hovers over
+        - submits form
+        - page finishes loading
+        syntax:
+        document.getElementById('clickThisButton').addEventListener('click', function goes here); function can be named or anon
+        */
+      /* document
+        .getElementById("clickThisButton")
+        .addEventListener("click", () => {
+          console.log("I was clicked!");
+        }); //console tracks number of times function  */
+
+      /* document
+        .getElementById("clickThisButton")
+        .addEventListener("click", (details) => {
+          console.log(details);
+        });*/
+
+      /*document
+        .getElementById("clickThisButton")
+        .addEventListener("click", (details) => {
+          details.target.style.backgroundColor = "red";
+        }); */
+
+      /* keyup event fires when key is released*/
+      //console.log(event); //console.log(event.target.value);
+      //console.log(document.getElementsByTagName("p"));
+
+      document
+        .getElementById("nameInput")
+        .addEventListener("keyup", (event) => {
+          if (event.target.value === "") {
+            document.getElementsByTagName(
+              "p"
+            )[1].innerText = `No name has been entered.`;
+          } else {
+            document.getElementsByTagName(
+              "p"
+            )[1].innerText = `Everyone please welcome ${event.target.value} to the stage.`;
+          }
+        });
+    </script>
+  </body>
+</html>
