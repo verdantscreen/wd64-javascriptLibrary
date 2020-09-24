@@ -78,8 +78,8 @@ let lastName = "Doe";
 
 function greeting(first, last) {
   console.log(`Hi ${first}! Welcome back.`);
-  console.log(`This is the first parameter: ${first}`);
-  console.log(`This is the second parameter: ${last}`);
+  //console.log(`This is the first parameter: ${first}`);
+  //console.log(`This is the second parameter: ${last}`);
 }
 
 greeting(firstName);
