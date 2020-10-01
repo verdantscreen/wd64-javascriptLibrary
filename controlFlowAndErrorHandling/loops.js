@@ -123,7 +123,7 @@ for(o of object) {
 let indexArr = ["spot 1", 2, true, "four"];
 
 for (pos of indexArr) {
-  console.log(pos);
+  console.log(indexArr[3]);
 }
 
 /*

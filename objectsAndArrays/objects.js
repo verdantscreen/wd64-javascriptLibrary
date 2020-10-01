@@ -75,6 +75,7 @@ let spaceJam = {
 console.log(Object.keys(spaceJam.toonSquad)); // String of Keys
 
 console.log(Object.keys(spaceJam.toonSquad.tDevil)); // string of the index numbers of that string value
+console.log(Object.values(spaceJam.toonSquad.tDevil)); // string of the values of that string value
 console.log(spaceJam.toonSquad.tDevil[2]);
 
 console.log(Object.values(spaceJam.toonSquad));

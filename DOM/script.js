@@ -74,14 +74,14 @@ btn.addEventListener("click", (event) => {
 */
 
 let btn = document.getElementById("clickThis");
-/*
+
 console.log(btn);
 
-btn.addEventListener("click", (event) => {
-  event.target.style.backgroundColor = "lightblue";
+/*btn.addEventListener("click", (event) => {
+  event.target.style.backgroundColor = "green";
 });
 btn.addEventListener("mouseover", (event) => {
-  event.target.style.backgroundColor = "red";
+  event.target.style.backgroundColor = "yellow";
 });*/
 
 let red = true;
@@ -97,7 +97,8 @@ let input = document.getElementById("nameInput");
 input.addEventListener("keyup", (e) => {
   console.log(e.target.value);
   //console.log(document.getElementsByTagName("p"));
-  document.getElementsByTagName("p")[0].innerText = "Chchchange";
+  document.getElementsByTagName("p")[0].innerText = "Input Entered";
+  document.getElementsByTagName("p")[2].innerText = "lolz";
 
   if (e.target.value == "") {
     document.getElementsByTagName(

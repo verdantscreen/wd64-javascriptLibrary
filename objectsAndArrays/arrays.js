@@ -50,15 +50,17 @@ let students = [
 console.log(students[1]);
 console.log(students[6][2]);
 console.log(`Hello ${students[1]}!`);
-console.log("Hello " + students[6][2] + "!");
+console.log(`Hello ${students[6][2]}!`);
 
 //? ARRAY METHODS
 // We have multiple methods to allow us to manipulate arrays as needed.
 
 let food = ["Pecan Pie", "Shrimp", "Quesadilla", "Cheesecake", "Hotdog"];
 for (foodItem of food) {
+  // foodItem is a placeholder referring the index values of the array (array named food in this example)
   console.log(foodItem);
 }
+console.log(foodItem);
 
 //Add to our array
 food.push("Pizza");
@@ -69,8 +71,8 @@ console.log("push: ", food);
 food.splice(1, 1, "Bananas"); //removes shrimp, inserts bananas: (position, number of items, replacement with)
 console.log("splice: ", food);
 
-//food[1] = "Apples"; //not a method, just targeting a position but same result
-//console.log(food);
+food[1] = "Apples"; //not a method, just targeting a position but same result
+console.log(food);
 
 food.splice(2, 0, "Sweet Potato Pie"); //injecting without removing any items
 console.log("splice 2: ", food);
@@ -119,11 +121,11 @@ console.log(bool.toString());
 
 let foodList = ["apple", "pear", "mushroom", "cheese", "peach"];
 
-for (let i = 0; i < foodList.length; i++) {
-  console.log(foodList[i]);
-}
+//for (let i = 0; i < foodList.length; i++) {
+//console.log(foodList[i]);
+//}
 //We invoke callback function for each element within our array
-foodList.forEach((foodItem) => console.log(foodItem));
+foodList.forEach((foodItem, i, array) => console.log(foodItem, i, array));
 
 // a call back function is another function we invoke within our main function
 
@@ -132,8 +134,8 @@ foodList.forEach((foodItem) => console.log(foodItem));
 //   callBack();
 // }
 
-foodList.forEach((foodItem, index) => {
-  console.log(foodItem);
+foodList.forEach((arrayKey, index) => {
+  console.log(arrayKey);
   console.log(index);
 });
 // - the second position of the parameter is ALWAYS
@@ -151,7 +153,7 @@ console.log("");
 console.log("Original:");
 console.log("");
 let moviesList = ["Inherent Vice", "Billy Madison", "Casino", "It Follows"];
-moviesList.forEach((movieItem, index) => {
+moviesList.forEach((movieItem) => {
   console.log(movieItem);
 });
 console.log("");

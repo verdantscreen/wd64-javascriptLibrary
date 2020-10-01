@@ -42,7 +42,7 @@ console.log(person4);
 
     1. keyword (function)
     2. function NAME. For constructor functions, the first letter SHOULD BE CAPITALIZED
-    3. parameters. These will be the values of the objects once this function is in use
+    3. parameters. These will be the key values of the objects once this function is in use
     4. the 'this' keyword gives us the ability to refer back to whatever called, or whatever activates it. In this case 'this' refers to 'Person'
     5. key of the new object we will create. this is NOT referring back to the parameter. 
     6. this is referring back to the parameter that we passed through.

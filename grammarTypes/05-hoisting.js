@@ -3,8 +3,8 @@
 ! HOISTING
 * ***********
     What is hoisting?
-    - undesirable effect
-    - JS pulls all variables and functions calls to the 'top' of their respective scope prior to being executed
+    - undesirable effect (we can see "chapters" but not their contents)
+    - JS pulls all variables and functions calls to the 'top' of their respective scope prior to being executed (declarations only)
     - only the declaration is pulled up NOT the assignment
 */
 
@@ -37,7 +37,7 @@ console.log(becomesGlobal);
 
 console.log(letVariable);
 let letVariable = "Using let";
-// this throws a ReferenceError due to ES6 not accepting undeclared variable. This is to ensure that we always declare our variables FIRST
+// this throws a ReferenceError due to ES6 not accepting undeclared variable. This is to ensure that we always declare our variables FIRST!!
 
 //? Hoisting Function
 // Function Declarations:

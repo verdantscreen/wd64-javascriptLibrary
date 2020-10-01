@@ -6,7 +6,7 @@
 
    - scope is how a computer keeps track of all variables in a program
    - scope can also be nested, where there's an outer scope (global) that encloses an inner scope.
-   - scope can (local)
+   - scope can be defined within a function (local) e.g. index value in a for loop
 
 */
 
