@@ -15,7 +15,7 @@ const copiedNamesDiff = ["Adam", "Jayne", nameOne, nameTwo];
 console.log(copiedNamesDiff);
 
 /*
-since the spread operator is pulling out all items of an array, we need to make sure we use the spread operator within a new array. this is so the values that were pulled out get placed placed into our new array.
+since the spread operator is pulling out all items of an array, we need to make sure we use the spread operator within a new array. this is so the values that were pulled out get placed into our new array.
 
 ...arrName (if not within array, will throw error)
 

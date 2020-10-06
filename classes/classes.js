@@ -5,7 +5,7 @@
     - classes can be defined by either expression or declaration
     - classes are functions
     - classes act as a blueprint for creating objects
-        - e.g.: model could be a preoperty of a class of automobile. Each new automobile we create that's a copy of our original class and could have a different value for the property of model
+        - e.g.: model could be a property of a class of automobile. Each new automobile we create that's a copy of our original class and could have a different value for the property of model
     - body of a class is between {}
     - constructor method is a special method for creating and initializing an object that was created with a class
         - there can only be ONE constructor model

@@ -30,7 +30,7 @@ nextBtn.addEventListener("click", nextPage); //3
 previousBtn.addEventListener("click", previousPage); //3
 
 //function declaration
-/*                  //1 event handling function (receives object containing properties aka variables and methods aka functions*/
+/*  //1 event handling function (receives object containing properties aka variables and methods aka functions*/
 function fetchResults(e) {
   //e is technically a placeholder but it should be descriptive = convention
   //console.log(e); //2 just logs event object
