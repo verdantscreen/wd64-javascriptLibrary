@@ -8,7 +8,7 @@
         - e.g.: model could be a property of a class of automobile. Each new automobile we create that's a copy of our original class and could have a different value for the property of model
     - body of a class is between {}
     - constructor method is a special method for creating and initializing an object that was created with a class
-        - there can only be ONE constructor model
+        - there can only be ONE constructor method
         - can use the keyword "super"
         - the super keyword is used to access and call functions on an object parent 
         - Introduced in ES5 (closest thing in vanilla JS to object oriented programming)

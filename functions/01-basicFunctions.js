@@ -32,10 +32,9 @@ functionName();
     - 4: STATEMENT "to process"
     - 5: INVOKE "on switch"
 */
-/*
+
 //? FUNCTION DECLARATION
 // chunk of code that performs a set action when it is invoked
-*/
 
 function functOne() {
   console.log("Statement Here");
