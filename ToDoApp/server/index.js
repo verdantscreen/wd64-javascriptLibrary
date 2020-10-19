@@ -1,10 +1,15 @@
 const Express = require("express"); //require is how we pull in a tool from elsewhere
 
+const applicationSequelizeObject = require("./db");
+
 const applicationControllers = require("./controllers/index");
 
 const expressApplicationObject = new Express(); // holds our express instance (create app's object)
 
+expressApplicationObject.use(Express.json()); //json middlewareto parse the "use the middleware in these parenthesis"
+
 expressApplicationObject.use("/test", applicationControllers.test);
+expressApplicationObject.use("/users", applicationControllers.users);
 
 expressApplicationObject.get("/", (request, response) => {
   console.log("[server]: Root GET request received");
@@ -35,8 +40,7 @@ expressApplicationObject.post("/challenge", (request, response) => {
 });*/
 
 // JSON in an request is a string
-
-expressApplicationObject.use(Express.json()); //json middlewareto parse the "use the middleware in these parenthesis"
+/*
 expressApplicationObject.post("/challenge", (request, response) => {
   let data = request.body;
   let message =
@@ -44,9 +48,22 @@ expressApplicationObject.post("/challenge", (request, response) => {
       ? `Hi ${data.name}, you're an adult!`
       : `Hi ${data.name}, you'll be an adult soon.`;
   response.send(message);
-});
+});*/
 
-expressApplicationObject.listen(9001, () => {
-  // tells it to listen
-  console.log("[server]: App is listening on port 9001");
-});
+// Startup Procedure:
+// 1. verify the connection to the postgres db will work
+// 2. run procedure to synchronize our db with our models
+// 3. listen on our specified port
+
+applicationSequelizeObject
+  .authenticate() // take a moment and verify you can do this
+  .then(() => applicationSequelizeObject.sync())
+  .then(() => {
+    expressApplicationObject.listen(9001, () => {
+      // tells it to listen
+      console.log("[server]: App is listening on port 9001");
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });

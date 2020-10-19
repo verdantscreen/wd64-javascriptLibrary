@@ -3,16 +3,23 @@ require("dotenv").config();
 let express = require("express"); //1
 let app = express(); //2
 let test = require("./controllers/testcontroller");
+let authTest = require("./controllers/authtestcontroller");
+
 let user = require("./controllers/usercontroller");
 let sequelize = require("./db");
 
 sequelize.sync(); //tip: pass in {force: true} for resetting tables
 
-app.use(express.json());
+app.use(express.json()); //discrepency?
+
+app.use(require("./middleware/headers"));
 
 app.use("/test", test);
 
 app.use("/api/user", user);
+
+app.use(require("./middleware/validate-session"));
+app.use("/authtest", authTest);
 
 //3     //4
 app.listen(3000, function () {

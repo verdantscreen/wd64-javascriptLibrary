@@ -13,6 +13,9 @@
 
 const TestController = require("./TestController");
 
+const UsersController = require("./UsersController");
+
 module.exports = {
   test: TestController,
+  users: UsersController,
 };

@@ -2,7 +2,7 @@
 
 const { Router } = require("express"); // picks just Router out of express
 
-const testControllerRouter = Router(); // new keyword isn't shown but it is implied
+const testControllerRouter = Router(); // 'new' keyword isn't shown but it is implied
 
 testControllerRouter.get("/", (req, res) => {
   let message = "Hello from test controller!";
