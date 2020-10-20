@@ -1,16 +1,5 @@
-// creating sequelize object (communication tool)
+const { Sequelize } = require('sequelize');
 
-const { Sequelize } = require("sequelize");
+const db = new Sequelize(process.env.DB_CONNECTION_STRING);
 
-const applicationSequelizeObject = new Sequelize(
-  //db name //postgres admin// pw  // object containing host and dialect
-  "todo-db",
-  "postgres",
-  "pyth0n2o2o",
-  {
-    host: "localhost",
-    dialect: "postgres",
-  }
-);
-
-module.exports = applicationSequelizeObject; //object
+module.exports = db;

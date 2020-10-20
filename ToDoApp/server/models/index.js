@@ -1,8 +1,22 @@
-// this file is a collection point and outlet for all models
+const User = require("./User");
+const ToDoItem = require("./ToDoItem");
+const ToDoList = require("./ToDoList");
 
-const User = require("./userModel"); // bring it in
+// Setup Associations
+User.hasMany(ToDoList, {
+  onDelete: "CASCADE",
+  foreignKey: "createdBy",
+});
+ToDoList.hasMany(ToDoItem, {
+  onDelete: "CASCADE",
+  foreignKey: "listId",
+});
+
+ToDoList.belongsTo(User);
+ToDoItem.belongsTo(ToDoList);
 
 module.exports = {
-  // object literal: handwritten object (not behind the scenes)
-  user: User,
+  User,
+  ToDoItem,
+  ToDoList,
 };
