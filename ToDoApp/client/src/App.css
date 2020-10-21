@@ -1,0 +1,6 @@
+#wrapper {
+  max-width: 400px;
+  margin: auto;
+  border: 3px solid lightcoral;
+  padding: 10px;
+}
