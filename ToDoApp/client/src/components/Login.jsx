@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // same as const React = require('react'); -- older more established way for JS
 import { Button, Form, FormGroup, Label, Input } from "reactstrap"; // object destructuring of reactstrap
+import "../styles/Login.css";
 
 const LoginComponent = (props) => {
   // execute the function
@@ -24,7 +25,7 @@ const LoginComponent = (props) => {
     // if the response is NOT OK, display an error message and do nothing
     if (email && password) {
       // ^^ this works bc blank strings are falsy
-      fetch("http://localhost:3000/user/login", {
+      fetch("http://localhost:8080/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -38,6 +39,7 @@ const LoginComponent = (props) => {
         .then((body) => {
           //body of the jsonified response that comes back in the promise
           props.authenticateUser(body.token);
+          console.log("login occurred");
         })
         .catch((error) => console.log(error));
     }
@@ -45,7 +47,7 @@ const LoginComponent = (props) => {
 
   // step 2 of mounting a react component: return the JSX component // if state change, trigger the re-render(loop back up to execute the function, if state change bring in new state values)
   return (
-    <div>
+    <div id="loginForm" className="authForm">
       <h3>Login</h3>
       <Form onSubmit={handleLoginSubmit}>
         <FormGroup>
